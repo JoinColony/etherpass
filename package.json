@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "example": "ts-node examples/express.ts & budo examples/express-client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +13,8 @@
   "devDependencies": {
     "@types/node": "^12.12.5",
     "body-parser": "^1.19.0",
+    "budo": "^11.6.3",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "ganache-cli": "^6.7.0",
     "ts-node": "^8.4.1",

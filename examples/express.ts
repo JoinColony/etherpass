@@ -32,6 +32,7 @@ import * as express from 'express'
 import { JWT, JWK } from 'jose'
 import { json } from 'body-parser'
 import { readFileSync } from 'fs'
+import * as cors from 'cors'
 
 import { getChallenge, verifyEthSignature } from '../index'
 
@@ -40,6 +41,7 @@ const jwtKey = JWK.asKey('seeeecret')
 const app = express()
 const port = 3000
 
+app.use(cors())
 app.use(json())
 
 app.post('/auth/challenge', (req, res) => {
@@ -69,7 +71,7 @@ app.get('/protected', (req, res, next) => {
     token = token.slice(7, token.length)
   }
   const { address } = JWT.decode(token) as { address: string };
-  return res.send('OK')
+  return res.send(address)
 })
 
 app.listen(port, () => console.log(`Started on port ${port}`))
