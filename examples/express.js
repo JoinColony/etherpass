@@ -28,13 +28,13 @@
  * curl -H "Content-Type: application/json" -d '{ "signature": "0x264c5acb2a1603f17dede4547c8ae84b54bd08b73cf2124e1be9ecfb404a08e56dfcd1ce4b83d030b1dde9255d181f85dfabdbb30c213da3b1665260dccebf3a1c", "challenge": "f5f53b672a472c1ef9214a1f3275207a9faa573e-16e3cf2ae51-396a2360bd3eaff2f4a8f0e978e71a33ba7bfcf0634ec9cfa0bf4a3789266727" }' http://127.0.0.1:3000/auth/token
  */
 
-import * as express from 'express'
-import { JWT, JWK } from 'jose'
-import { json } from 'body-parser'
-import { readFileSync } from 'fs'
-import * as cors from 'cors'
+const express = require('express')
+const { JWT, JWK } = require('jose')
+const { json } = require('body-parser')
+const { readFileSync } = require('fs')
+const cors = require('cors')
 
-import { getChallenge, verifyEthSignature } from '../index'
+const { getChallenge, verifyEthSignature } = require('../lib/index');
 
 const jwtKey = JWK.asKey('seeeecret')
 
