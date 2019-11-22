@@ -19,20 +19,21 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/JoinColony/etherpass.git"
+  },
   "devDependencies": {
+    "@types/express": "^4.17.2",
     "@types/node": "^12.12.5",
     "body-parser": "^1.19.0",
     "budo": "^11.6.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "ganache-cli": "^6.7.0",
+    "jose": "^1.11.0",
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "@types/base64-url": "^2.2.0",
-    "@types/express": "^4.17.2",
-    "base64-url": "^2.3.2",
-    "jose": "^1.11.0",
-    "web3": "^1.2.2"
+    "ethers": "^4.0.39"
   }
 }
