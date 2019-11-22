@@ -1,6 +1,6 @@
 {
   "name": "etherpass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "lib/index.js",
   "files": [
@@ -19,7 +19,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/JoinColony/etherpass.git"
   },
