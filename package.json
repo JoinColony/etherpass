@@ -2,11 +2,18 @@
   "name": "etherpass",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "Readme.md",
+    "Implementation.md",
+    "LICENSE"
+  ],
   "scripts": {
     "example": "ts-node examples/express.ts & budo examples/express-client.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --outDir lib"
+    "build": "tsc",
+    "prerelease": "npm run build"
   },
   "keywords": [],
   "author": "",
