@@ -11,10 +11,10 @@
     "LICENSE"
   ],
   "scripts": {
-    "example": "ts-node examples/express.ts & budo examples/express-client.js",
+    "example": "npm run build && node examples/express.js & budo examples/express-client.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "prerelease": "npm run build"
+    "prepublish": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +26,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "ganache-cli": "^6.7.0",
-    "ts-node": "^8.4.1",
     "typescript": "^3.6.4"
   },
   "dependencies": {
